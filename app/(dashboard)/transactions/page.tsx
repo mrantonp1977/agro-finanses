@@ -10,7 +10,7 @@ import ProductsTransactionTable from './_components/ProductsTransactionTable';
 
 function TransactionsPage() {
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date }>({
-    from: startOfYear(new Date()),
+    from: startOfMonth(new Date()),
     to: new Date(),
   });
   return (
