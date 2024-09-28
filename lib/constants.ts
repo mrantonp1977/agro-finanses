@@ -1,1 +1,1 @@
-export const MAX_DATE_RANGE_DAYS = 270;
+export const MAX_DATE_RANGE_DAYS = 365;

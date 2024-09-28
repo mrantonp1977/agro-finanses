@@ -3,7 +3,7 @@
 import { DateRangePicker } from '@/components/ui/date-range-picker';
 import { MAX_DATE_RANGE_DAYS } from '@/lib/constants';
 import { UserSettings } from '@prisma/client';
-import { differenceInDays, startOfMonth } from 'date-fns';
+import { differenceInDays, startOfMonth, startOfYear } from 'date-fns';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import ProductStatsCards from './ProductStatsCards';
@@ -12,7 +12,7 @@ import ProductCategoriesStats from './ProductCategoriesStats';
 
 function ProductOverview({ userSettings }: { userSettings: UserSettings }) {
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date }>({
-    from: startOfMonth(new Date()),
+    from: startOfYear(new Date()),
     to: new Date(),
   });
   return (
