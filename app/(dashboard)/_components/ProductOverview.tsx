@@ -12,7 +12,7 @@ import ProductCategoriesStats from './ProductCategoriesStats';
 
 function ProductOverview({ userSettings }: { userSettings: UserSettings }) {
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date }>({
-    from: startOfMonth(new Date()),
+    from: startOfYear(new Date()),
     to: new Date(),
   });
   return (
