@@ -12,7 +12,7 @@ import CategoriesStats from './CategoriesStats';
 function Overview({ userSettings }: { userSettings: UserSettings }) {
   // const now = new Date()
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date }>({
-    from: startOfYear(new Date()),
+    from: startOfMonth(new Date()),
     to: new Date(),
   });
   return (
